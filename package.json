@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "http://mickozak.github.io/React-ContactsList",
   "dependencies": {
+    "material-ui": "^0.20.0",
     "react": "^15.5.4",
     "react-dom": "^15.5.4"
   },
