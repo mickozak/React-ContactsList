@@ -12,8 +12,8 @@ class ContactList extends React.Component {
         super(props)
         this.state = {
         contacts: [
-            {name: 'Michał', surname: 'Kozak', email: 'michalkozak.aiesec@gmail.com', phone: '444-444-444', uid: 1524820880578},
-            {name: 'Agnieszka', surname: 'Kozak', email: 'agnieszkakozak@gmail.com', phone: '555-555-555', uid: 1524820880579}
+            {name: 'Michał Kozak', email: 'michalkozak.aiesec@gmail.com', phone: '444-444-444', uid: 1524820880578},
+            {name: 'Agnieszka Kozak', email: 'agnieszkakozak@gmail.com', phone: '555-555-555', uid: 1524820880579}
         ],
         nameAdd: '',
         surnameAdd: '',
@@ -21,7 +21,6 @@ class ContactList extends React.Component {
         phoneAdd: '',
     }
     this.newContactChangeHandlerName = this.newContactChangeHandlerName.bind(this)
-    this.newContactChangeHandlerSurname=this.newContactChangeHandlerSurname.bind(this)
     this.newContactChangeHandlerEmail=this.newContactChangeHandlerEmail.bind(this)
     this.newContactChangeHandlerPhone=this.newContactChangeHandlerPhone.bind(this)
     this.addContact=this.addContact.bind(this)
@@ -35,11 +34,8 @@ class ContactList extends React.Component {
         })
     }
 
-    newContactChangeHandlerName = (event, newValue) => this.setState({
+    newContactChangeHandlerName = (event,newValue) => this.setState({
         nameAdd: newValue
-    })
-    newContactChangeHandlerSurname = (event, newValue) => this.setState({
-        surnameAdd: newValue
     })
     newContactChangeHandlerEmail = (event, newValue) => this.setState({
         emailAdd: newValue
@@ -51,7 +47,7 @@ class ContactList extends React.Component {
     addContact = () => {
         const newContact = {
             name: this.state.nameAdd,
-            surname: this.state.surnameAdd,
+
             email: this.state.emailAdd,
             phone: this.state.phoneAdd,
             uid: Date.now()
@@ -59,8 +55,7 @@ class ContactList extends React.Component {
         const newContacts = this.state.contacts.concat(newContact)
 
         this.setState({
-            contacts: newContacts,
-            newContact: ''
+            contacts: newContacts
         })
     }
 
@@ -72,8 +67,6 @@ class ContactList extends React.Component {
                     onClickHandler={this.addContact}
                     newNameValue={this.state.nameAdd}
                     onChangeHandlerName={this.newContactChangeHandlerName}
-                    newSurnameValue={this.state.surnameAdd}
-                    onChangeHandlerSurname={this.newContactChangeHandlerSurname}
                     newEmailValue={this.state.emailAdd}
                     onChangeHandlerEmail={this.newContactChangeHandlerEmail}
                     newPhoneValue = {this.state.phoneAdd}

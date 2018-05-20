@@ -6,46 +6,38 @@ import TextField from 'material-ui/TextField'
 import Divider from 'material-ui/Divider'
 
 const style = {
-    textAlign: 'center',
     display: 'inline-block',
+    marginBottom: '20px',
+    width: '100%'
 };
 
-const Controls = ({newNameValue, onChangeHandlerName, newSurnameValue, onChangeHandlerSurname, onClickHandler,
-                  newEmailVale, onChangeHandlerEmail, newPhoneValue, onChangeHandlerPhone}) => (
+const Controls = (props) => (
     <Paper style={style} zDepth={1}>
         <TextField
-            onChange={onChangeHandlerName}
-            value={newNameValue}
+            onChange={props.onChangeHandlerName}
+            value={props.newNameValue}
             name={'new-name'}
-            placeholder={'Name...'}
+            placeholder={'Name/Surname...'}
             fullWidth={true}
         />
         <Divider/>
         <TextField
-            onChange={onChangeHandlerSurname}
-            value={newSurnameValue}
-            name={'new-surname'}
-            placeholder={'Surname...'}
-            fullWidth={true}
-        />
-        <Divider/>
-        <TextField
-            onChange={onChangeHandlerEmail}
-            value={newEmailVale}
+            onChange={props.onChangeHandlerEmail}
+            value={props.newEmailVale}
             name={'new-email'}
             placeholder={'Email...'}
             fullWidth={true}
         />
         <Divider/>
         <TextField
-            onChange={onChangeHandlerPhone}
-            value={newPhoneValue}
+            onChange={props.onChangeHandlerPhone}
+            value={props.newPhoneValue}
             name={'new-phone'}
             placeholder={'Phone...'}
             fullWidth={true}
         />
         <RaisedButton
-            onClick={onClickHandler}
+            onClick={props.onClickHandler}
             primary={true}
             fullWidth={true}
             label={'ADD'}

@@ -9,7 +9,7 @@ import AvatarExampleSimple from './AvatarExampleSimple'
 const Contact = ({name, surname, email, phone, deleteContact}) => (
 
     <div>
-        <AvatarExampleSimple name={name} surname={surname}/>
+        <AvatarExampleSimple name={name}/>
         <MenuItem
             primaryText={<div>Email: {email} Phone: {phone}</div>}
             rightIcon={
