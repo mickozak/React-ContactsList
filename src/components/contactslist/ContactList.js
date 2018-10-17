@@ -12,8 +12,8 @@ class ContactList extends React.Component {
         super(props)
         this.state = {
         contacts: [
-            {name: 'Michał Kozak', email: 'michalkozak.aiesec@gmail.com', phone: '444-444-444', uid: 1524820880578},
-            {name: 'Agnieszka Kozak', email: 'agnieszkakozak@gmail.com', phone: '555-555-555', uid: 1524820880579}
+            {name: 'Michał Kozak', email: 'kozak_m@outlook.com', phone: '+48 739-066-120', uid: 1524820880578},
+            {name: 'Agnieszka Nowak', email: 'agnieszkanowak@gmail.com', phone: '+48 555-555-555', uid: 1524820880579}
         ],
         nameAdd: '',
         surnameAdd: '',

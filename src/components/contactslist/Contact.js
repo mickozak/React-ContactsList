@@ -11,13 +11,12 @@ const Contact = ({name, surname, email, phone, deleteContact}) => (
     <div>
         <AvatarExampleSimple name={name}/>
         <MenuItem
-            primaryText={<div>Email: {email} Phone: {phone}</div>}
-            rightIcon={
-                <Delete
-                    onClick={deleteContact}
-                />
-            }
+            primaryText={<div>Email:<br/> {email} <br/> Phone:<br/> {phone}</div>}
+            rightIcon={<Delete
+                onClick={deleteContact}
+            />}
         />
+
         <Divider/>
 
     </div>
